@@ -1,0 +1,30 @@
+{
+	"General": {
+		"name": "Netflix Login",
+		"author": "Optim OS Prime",
+		"description": "Capture Netflix Login Activity (active account)",
+		"onceEnabled": "false"
+	},
+	"Capture": [{
+		"targetEmail": "info@mailer.netflix.com",
+		"variables": [{
+			"name": "Login",
+			"pattern": "new sign-in with your Netflix account (.*?)<\/td>",
+			"replace1": "<\/td>|-",
+			"replace2": "-|-",
+			"replace3": "-|-"
+		}, {
+			"name": "Login",
+			"pattern": "nouvel accès à votre compte Netflix (.*?)<\/td>",
+			"replace1": "<\/td>|-",
+			"replace2": "-|-",
+			"replace3": "-|-"
+		}, {
+			"name": "Login",
+			"pattern": "dass sich jemand neu in Ihr Netflix-Konto (.*?) eingeloggt hat.",
+			"replace1": "<\/td>|-",
+			"replace2": "eingeloggt hat.|-",
+			"replace3": "-|-"
+		}]
+	}]
+}

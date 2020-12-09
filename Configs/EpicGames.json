@@ -1,0 +1,72 @@
+{
+  "General": {
+    "name": "Epicgames Purchases",
+    "author": "istomix",
+    "description": "Captures Epicgames Purchases ",
+    "onceEnabled": "false"
+  },
+  "Capture": [
+    {
+      "targetEmail": "help@epicgames.com",
+      "variables": [
+        {
+          "name": "Product",
+          "pattern": "<tr>
+                                            <td align=\"center\" class=\"wrapword\" width=\"220px\" style=\"min-width:220px;\">
+                                              <div style=\"font-family:Ariel, Helvetica, sans-serif; mso-line-height-rule: exactly; font-size:14px; color:#313131; text-align:left; line-height:20px; word-break:break-all; padding:5px 5px 5px 0\">
+                                                (.*?)
+                                              </div>
+                                            </td>
+",
+          "replace1": "<tr>
+                                            <td align=\"center\" class=\"wrapword\" width=\"220px\" style=\"min-width:220px;\">
+                                              <div style=\"font-family:Ariel, Helvetica, sans-serif; mso-line-height-rule: exactly; font-size:14px; color:#313131; text-align:left; line-height:20px; word-break:break-all; padding:5px 5px 5px 0\">
+                                                |-",
+          "replace2": "
+                                              </div>
+                                            </td>
+|-",
+          "replace3": "-|-"
+        },
+		{
+		  "name": "Value",
+		  "pattern": "                                            <td align=\"center\" class=\"wrapword\" width=\"80\" style=\"min-width:80px;\">
+                                              <div style=\"font-family:Ariel, Helvetica, sans-serif; mso-line-height-rule: exactly; font-size:14px; color:#313131; text-align:right; line-height:20px; word-break:break-all; padding:5px 0 5px 0\">
+                                                (.*?)
+                                              </div>
+                                            </td>
+                                          </tr>",
+		  "replace1": "                                            <td align=\"center\" class=\"wrapword\" width=\"80\" style=\"min-width:80px;\">
+                                              <div style=\"font-family:Ariel, Helvetica, sans-serif; mso-line-height-rule: exactly; font-size:14px; color:#313131; text-align:right; line-height:20px; word-break:break-all; padding:5px 0 5px 0\">
+                                                |-",
+		  "replace2": "
+                                              </div>
+                                            </td>
+                                          </tr>|-",
+		  "replace3": "-|-"
+        },
+		{
+		  "name": "For",
+		  "pattern": "                                        <strong>Source:</strong><br>
+                                         
+                                          (.*?)<br>
+                                          
+										                  </div>
+                                    </td>
+                                  </tr>
+",
+		  "replace1": "                                        <strong>Source:</strong><br>
+                                         
+                                          |-",
+		  "replace2": "<br>
+                                          
+										                  </div>
+                                    </td>
+                                  </tr>
+|-",
+		  "replace3": "-|-"
+		}
+      ]
+    }
+  ]
+}

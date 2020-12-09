@@ -1,0 +1,82 @@
+{
+  "General": {
+    "name": "American Eagle",
+    "author": "Lucky",
+    "description": "Captures Bunch of stuff",
+    "onceEnabled": "false"
+  },
+  "Capture": [
+    {
+      "targetEmail": "ae@e.ae.com",
+      "variables": [
+        {
+          "name": "Status",
+          "pattern": "<td width=\"200\" height=\"29\" align=\"left\" valign=\"bottom\" bgcolor=\"#ffffff\" style=\"mso-line-height-rule: exactly; color: #80b4ff; font-family: Arial,Helvetica,sans-serif; font-size: 20px; line-height: 20px; font-weight: normal; letter-spacing: 1px;\">(.*?)</td>
+",
+          "replace1": "<td width=\"200\" height=\"29\" align=\"left\" valign=\"bottom\" bgcolor=\"#ffffff\" style=\"mso-line-height-rule: exactly; color: #80b4ff; font-family: Arial,Helvetica,sans-serif; font-size: 20px; line-height: 20px; font-weight: normal; letter-spacing: 1px;\">|-",
+          "replace2": "</td>
+|-",
+          "replace3": "-|-"
+        },
+		{
+		  "name": "Points",
+		  "pattern": "<td width=\"81\" height=\"29\" align=\"center\" valign=\"bottom\" bgcolor=\"#ffffff\" style=\"mso-line-height-rule: exactly; color: #80b4ff; font-family: Arial,Helvetica,sans-serif; font-size: 20px; line-height: 20px; font-weight: normal; letter-spacing: 1px;\">(.*?)</td>
+",
+		  "replace1": "<td width=\"81\" height=\"29\" align=\"center\" valign=\"bottom\" bgcolor=\"#ffffff\" style=\"mso-line-height-rule: exactly; color: #80b4ff; font-family: Arial,Helvetica,sans-serif; font-size: 20px; line-height: 20px; font-weight: normal; letter-spacing: 1px;\">|-",
+		  "replace2": "</td>
+|-",
+		  "replace3": "-|-"
+        },
+		{
+		  "name": "Jeans",
+		  "pattern": "<td width=\"66\" height=\"29\" align=\"center\" valign=\"bottom\" bgcolor=\"#ffffff\" style=\"mso-line-height-rule: exactly; color: #80b4ff; font-family: Arial,Helvetica,sans-serif; font-size: 20px; line-height: 20px; font-weight: normal; letter-spacing: 1px;\">(.*?)</td>
+</tr>
+<tr>
+<td width=\"66\" height=\"4\" bgcolor=\"#ffffff\"></td>
+</tr>
+<tr>
+<td width=\"66\" height=\"23\" align=\"center\" valign=\"top\" bgcolor=\"#ffffff\" style=\"mso-line-height-rule: exactly; color: #888888; font-family: Arial,Helvetica,sans-serif; font-size: 13px; line-height: 13px; font-weight: lighter; letter-spacing: 0;\">Jeans</td>
+",
+		  "replace1": "<td width=\"66\" height=\"29\" align=\"center\" valign=\"bottom\" bgcolor=\"#ffffff\" style=\"mso-line-height-rule: exactly; color: #80b4ff; font-family: Arial,Helvetica,sans-serif; font-size: 20px; line-height: 20px; font-weight: normal; letter-spacing: 1px;\">|-",
+		  "replace2": "</td>
+</tr>
+<tr>
+<td width=\"66\" height=\"4\" bgcolor=\"#ffffff\"></td>
+</tr>
+<tr>
+<td width=\"66\" height=\"23\" align=\"center\" valign=\"top\" bgcolor=\"#ffffff\" style=\"mso-line-height-rule: exactly; color: #888888; font-family: Arial,Helvetica,sans-serif; font-size: 13px; line-height: 13px; font-weight: lighter; letter-spacing: 0;\">Jeans</td>
+|-",
+		  "replace3": "-|-"
+        },
+		{
+		  "name": "Bra's",
+		  "pattern": "<td width=\"66\" height=\"29\" align=\"center\" valign=\"bottom\" bgcolor=\"#ffffff\" style=\"mso-line-height-rule: exactly; color: #80b4ff; font-family: Arial,Helvetica,sans-serif; font-size: 20px; line-height: 20px; font-weight: normal; letter-spacing: 1px;\">(.*?)</td>
+</tr>
+<tr>
+<td width=\"66\" height=\"4\" bgcolor=\"#ffffff\"></td>
+</tr>
+<tr>
+<td width=\"66\" height=\"23\" align=\"center\" valign=\"top\" bgcolor=\"#ffffff\" style=\"mso-line-height-rule: exactly; color: #888888; font-family: Arial,Helvetica,sans-serif; font-size: 13px; line-height: 13px; font-weight: lighter; letter-spacing: 0;\">Bras</td>
+",
+		  "replace1": "<td width=\"66\" height=\"29\" align=\"center\" valign=\"bottom\" bgcolor=\"#ffffff\" style=\"mso-line-height-rule: exactly; color: #80b4ff; font-family: Arial,Helvetica,sans-serif; font-size: 20px; line-height: 20px; font-weight: normal; letter-spacing: 1px;\">|-",
+		  "replace2": "</td>
+</tr>
+<tr>
+<td width=\"66\" height=\"4\" bgcolor=\"#ffffff\"></td>
+</tr>
+<tr>
+<td width=\"66\" height=\"23\" align=\"center\" valign=\"top\" bgcolor=\"#ffffff\" style=\"mso-line-height-rule: exactly; color: #888888; font-family: Arial,Helvetica,sans-serif; font-size: 13px; line-height: 13px; font-weight: lighter; letter-spacing: 0;\">Bras</td>
+|-",
+		  "replace3": "-|-"
+		}
+      ]
+    }
+  ]
+}
+
+
+
+
+
+
+
